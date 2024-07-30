@@ -8,19 +8,27 @@
 
 :root {
     --light-grey: #f5f6f7;
-    --dark-blue: #1b1b32;
-    --orange: #f1be32;
+    --light-orange: #f1be32;
+    --dark-orange: #f1a132;
+    --yellow: #ffec3c;
 }
 
 body {
-    background-color: var(--dark-blue);
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18px;
-    color: var(--light-grey);
-    padding: 0 15px;
+    background: linear-gradient(to top, var(--light-orange), var(--dark-orange));
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200vh;
+}
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    color: var(--light-grey);
+    margin-top: 12rem;
+    padding: 0 15px;
 }
 
 h1 {
@@ -39,14 +47,19 @@ h1 {
 }
 
 .convert-btn {
-    background-color: var(--orange);
+    background-color: var(--yellow);
     cursor: pointer;
     border: none;
-    padding: 4px;
+    border-radius: 3px;
+    padding: 5px 8px;
+    color: rgb(225, 96, 56);
+    font-weight: 700;
 }
 
 .number-input {
     height: 25px;
+    border-radius: 3px;
+    border: none;
 }
 
 #result {
@@ -56,7 +69,7 @@ h1 {
     min-height: 80px;
     word-break: break-word;
     padding: 15px;
-    border: 5px solid var(--orange);
+    border: transparent;
     font-size: 2rem;
     text-align: center;
 }
@@ -69,7 +82,7 @@ h1 {
 .animation-frame {
     margin: 250px auto 0;
     padding: 15px 10px;
-    border: 5px solid var(--orange);
+    border: 5px solid var(--yellow);
     font-size: 1.2rem;
     text-align: center;
 }

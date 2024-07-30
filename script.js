@@ -2,6 +2,8 @@ const numberInput = document.getElementById('number-input');
 const convertBtn = document.getElementById('convert-btn');
 const result = document.getElementById('result');
 const animationContainer = document.getElementById('animation-container');
+const container = document.querySelector('.container');
+const borderStyle = '5px solid #ffec3c';
 
 const animationData = [
     {
@@ -41,6 +43,7 @@ function checkUserInput() {
         showAnimation();
         return;
     }
+    result.style.border = borderStyle;
     result.textContent = decimalToBinary(inputInt);
     numberInput.value = '';
 }
@@ -54,6 +57,9 @@ function decimalToBinary(input) {
 };
 
 function showAnimation() {
+    numberInput.value = '';
+    container.style.marginTop = '0';
+    result.style.border = 'transparent';
     result.innerText = "Call Stack Animation";
     animationData.forEach((obj) => {
         setTimeout(() => {
@@ -67,6 +73,8 @@ function showAnimation() {
         }, obj.removeElDelay);
     });
     setTimeout(() => {
+        container.style.marginTop = '12rem';
+        result.style.border = borderStyle;
         result.textContent = decimalToBinary(5);
     }, 20000);
 }
