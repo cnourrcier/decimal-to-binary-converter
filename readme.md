@@ -1,6 +1,8 @@
 # Decimal to Binary Converter
 
+<!-- DESCRIPTION-START -->
 A JavaScript app to convert base-10 numbers to binary.
+<!-- DESCRIPTION-END -->
 
 ![project image](https://res.cloudinary.com/dwguf4w1t/image/upload/v1722356288/Portfolio%20Projects/decimal-binary-converter-js_fgvpmv.png)
 
